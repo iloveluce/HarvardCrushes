@@ -10,6 +10,9 @@
 footer{
 	color: black;
 }
+.main-title{
+	color: #000;
+}
 .barm {
   fill: steelblue;
 }
@@ -137,7 +140,7 @@ var tip = d3.tip()
 
 d3.csv("datawomen.csv", type, function(error, womendata) {
 
-	d3.csv("datamen.csv", type, function(error, data) {
+d3.csv("datamen.csv", type, function(error, data) {
 
   x.domain(womendata.map(function(d) { return d.Word; }));
   y.domain([0, d3.max(womendata, function(d) { return d.frequency; })]);
@@ -311,7 +314,7 @@ function type(d) {
 <div class="container-fluid maincontainer">
 
 <div class = "container-fluid intro">
-<h1 class= "mainheader">
+<h1 class= "mainheader mainheader_resp">
 Crushes: Examining Evolutionary Theories in Love Messages
 </h1>
 <h2 class = "secondheader">
@@ -321,7 +324,7 @@ Crushes: Examining Evolutionary Theories in Love Messages
 </div>
 
 <div id ="abstract"class="container containertext">
-		<h1> What? tldr</h1>
+		<h1 class ="main-title"> What? tldr</h1>
 
       <p class="lead">Well we know men and women are different. But how do they differ in the way they crush on each other? Those messages they send to try to court each other.
       	Which one says love more often? Which one says mentions physical
